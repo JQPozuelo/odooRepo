@@ -11,7 +11,7 @@
     """,
 
     'author': "Jorge J5",
-    'website': "http://infsalinas.sytes.net:1021",
+    'website': "http://infsalinas.sytes.net:10210",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -24,7 +24,8 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/proyectos_security.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
