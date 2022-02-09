@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "proyectos",
+    'name': "Gestión de proyectos",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Modulo de ejemplo para SGE""",
 
     'description': """
-        Long description of module's purpose
+        Este módulo pretende ser una guía para la programación 
+        y desarrollo de módulos en Odoo
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Jorge J5",
+    'website': "http://infsalinas.sytes.net:1021",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
+    'category': 'UnaModerna',
     'version': '0.1',
 
     # any module necessary for this one to work correctly
@@ -32,4 +32,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    # Es una aplicación
+    'application' : True ,
 }
