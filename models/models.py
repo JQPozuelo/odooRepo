@@ -19,6 +19,8 @@
 
 import string
 from odoo import models, fields, api
+from datetime import date
+from dateutil.relativedelta import *
 
 class departamento(models.Model):
     _name = 'proyectos.departamento'
@@ -38,12 +40,13 @@ class empleado(models.Model):
     fechaNacimiento = fields.Date(string='Fecha nacimiento', requiered=True, default = fields.date.today())
     direccionEmpleado = fields.Char(string='Dirección', requiered=True)
     telefonoEmpleado = fields.Char(string='Telefono', requiered=True)
-    edad = fields.Integer('Edad', compute='getEdad')
+    edad = fields.Integer('Edad', compute='_getEdad')
 
     @api.depends('fechaNacimiento')
-    def getEdad(self):
+    def _getEdad(self):
+        hoy = date.today()
         for empleado in self:
-            empleado.edad = 0
+            empleado.edad = relativedelta(hoy, empleado.fechaNacimiento).years
     
     #relaciones entre tablas
     departamento_id = fields.Many2one('proyectos.departamento', string='Empleados')
