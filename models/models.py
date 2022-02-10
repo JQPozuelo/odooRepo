@@ -71,8 +71,8 @@ class proyecto(models.Model):
     decripcionProyecto = fields.Text(string='Descripcion del proyecto', help='Indica una descripción del proyecto')
     fechaInicio = fields.Date(string='Fecha Inicio', required=True)
     fechaFin = fields.Date(string='Fecha Final', required=True)
-    
-    @api.depends('fechaInicio')
+
+    @api.constrains('fechaInicio')
     def _checkFechaInicio(self):
         hoy = date.today()
         for proyecto in self:
