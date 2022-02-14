@@ -55,6 +55,18 @@ class empleado(models.Model):
                 raise exceptions.ValidationError("El DNI no puede ser superior 9 caracteres")
             if (len(empleado.dniEmpleado) < 9):
                 raise exceptions.ValidationError("El DNI no puede tener menos de 9 caracteres")
+
+    @api.constrains('edad')
+    def _checkEdad(self):
+        for empleado in self:
+            if(empleado.edad < 18):
+                raise exceptions.ValidationError("La edad no puede ser inferior a 18")
+            
+    @api.constrains('telefonoEmpleado')
+    def _checkTelefono(self):
+        for empleado in self:
+            if(len(empleado.telefonoEmpleado) < 9)
+                raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
     
 
     #relaciones entre tablas
