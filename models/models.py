@@ -65,7 +65,7 @@ class empleado(models.Model):
     @api.constrains('telefonoEmpleado')
     def _checkTelefono(self):
         for empleado in self:
-            if(len(empleado.telefonoEmpleado) < 9)
+            if(len(empleado.telefonoEmpleado) < 9):
                 raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
     
 
