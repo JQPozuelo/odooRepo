@@ -41,6 +41,17 @@
                                         <td>
                                             <span t-field="empleado.nombreEmpleado"/>
                                         </td>
+                                        <td>
+                                            <span t-field="empleado.fechaNacimiento"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="empleado.edad"/>
+                                        </td>
+                                         <td>
+                                            <span t-field="empleado.direccionEmpleado"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="empleado.telefonoEmpleado"/>
                                     </tr>
                                 </t>
                             </tbody>
