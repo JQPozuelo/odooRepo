@@ -20,8 +20,8 @@
                         <h3 t-field="departamento.nombreDepartamento"></h3>
                        
 
-                        <table class="mitabla">
-                            <thread>
+                        <table class="table table-sm o_main_table">
+                            <thead>
                                 <tr>
                                     <th>DNI</th>
                                     <th>Nombre</th>
@@ -31,7 +31,7 @@
                                     <th>Telefono</th>
                                         
                                 </tr>
-                            </thread>
+                            </thead>
                             <tbody>
                                 <t t-foreach="departamento.empleado_id" t-as="empleado">
                                     <tr>
