@@ -47,11 +47,12 @@
                                         <td>
                                             <span t-field="empleado.edad"/>
                                         </td>
-                                         <td>
+                                        <td>
                                             <span t-field="empleado.direccionEmpleado"/>
                                         </td>
                                         <td>
                                             <span t-field="empleado.telefonoEmpleado"/>
+                                        </td>
                                     </tr>
                                 </t>
                             </tbody>
