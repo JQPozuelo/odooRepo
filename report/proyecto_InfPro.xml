@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-foreach="departamento.empleado_id" t-as="empleado">
+                                <t t-foreach="departamento.empleado_ids" t-as="empleado">
                                     <tr>
                                         <td>
                                             <span t-field="empleado.dniEmpleado"/>
