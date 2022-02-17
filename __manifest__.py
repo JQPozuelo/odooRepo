@@ -29,7 +29,7 @@
         'views/views.xml',
         'views/templates.xml',
         'report/proyecto_idDpto_report.xml',
-        'report/proyecto_infPro.xml',
+        'report/proyecto_InfPro.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
