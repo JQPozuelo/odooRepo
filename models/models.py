@@ -31,6 +31,12 @@ class departamento(models.Model):
     #Comentario de prueba
     empleado_id = fields.One2many('proyectos.empleado','departamento_id' ,string='Departamento')
 
+    def name_get(self):
+        listaDptos =  []
+        for departamento in self:
+            listaDptos.append(departamento.id, departamento.nombreDepartamento)
+        return listaDptos
+
 class empleado(models.Model):
     _name = 'proyectos.empleado'
     _description = 'Atributos para un empleado'
