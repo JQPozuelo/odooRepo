@@ -34,7 +34,7 @@ class departamento(models.Model):
     def name_get(self):
         listaDptos =  []
         for departamento in self:
-            listaDptos.append(departamento.id, departamento.nombreDepartamento)
+            listaDptos.append((departamento.id, departamento.nombreDepartamento))
         return listaDptos
 
 class empleado(models.Model):
