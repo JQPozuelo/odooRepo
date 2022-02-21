@@ -122,7 +122,7 @@
     </record>
 
 
-    <menuitem name="proyectos" id="proyectos.menu_root"/>
+    <menuitem name="proyectos" id="proyectos.menu_root" web_icon = "proyectos,static/description/icon.png"/>
 
     <!-- menu categories -->
     <menuitem name="Empleados" id="proyectos.empleados_menu" parent="proyectos.menu_root" action="proyectos.empleado_action_window"/>
