@@ -33,4 +33,16 @@ class horario(models.Model):
     nombreHorario = fields.Char(string='Nombre horario', required=True)
     lunesEntrada = fields.Date(string='Hora entrada lunes')
     lunesSalida = fields.Date(string='Hora salida lunes')
+
+    martesEntrada = fields.Date(string='Hora entrada martes')
+    martesSalida = fields.Date(string='Hora salida martes')
+
+    miercolesEntrada = fields.Date(string='Hora entrada miercoles')
+    miercolesSalida = fields.Date(string='Hora salida miercoles')
+
+    juevesEntrada = fields.Date(string='Hora entrada jueves')
+    juevesSalida = fields.Date(string='Hora salida jueves')
+
+    viernesEntrada = fields.Date(string='Hora entrada viernes')
+    viernesSalida = fields.Date(string='Hora salida viernes')
     

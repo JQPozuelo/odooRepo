@@ -34,6 +34,22 @@
                 <field name="lunesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
                 <field name="lunesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
               </group>
+              <group col="2">
+                <field name="martesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+                <field name="martesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+              </group>
+              <group col="2">
+                <field name="miercolesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+                <field name="miercolesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+              </group>
+              <group col="2">
+                <field name="juevesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+                <field name="juevesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+              </group>
+              <group col="2">
+                <field name="viernesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+                <field name="viernesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+              </group>
             </page>
             <page string="Pagina 2">
               <group>
