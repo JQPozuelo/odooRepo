@@ -30,8 +30,9 @@
           </group>
           <notebook>
             <page string="Pagina 1">
-              <group>
-                <CONTENT/>
+              <group col="2">
+                <field name="lunesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
+                <field name="lunesSalida"/>
               </group>
             </page>
             <page string="Pagina 2">
