@@ -13,6 +13,38 @@
     </field>
   </record>
 
+  <!--Vistas Formularios-->
+  <record model="ir.ui.view" id="horarios.horario_view">
+    <field name="name">horarios.horario.view.tree</field>
+    <field name="model">horarios.horario</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <div class="oe_button_box">
+            <BUTTONS/>
+          </div>
+          <group>
+            <group>
+              <h1>Vista horario</h1>
+            </group>
+          </group>
+          <notebook>
+            <page string="Pagina 1">
+              <group>
+                <CONTENT/>
+              </group>
+            </page>
+            <page string="Pagina 2">
+              <group>
+                <CONTENT/>
+              </group>
+            </page>
+          </notebook>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
  <!--DEFINICION DE MENUS-->
     <!-- Top menu item -->
   <record model="ir.actions.act_window" id="horarios.horario_action_window">
