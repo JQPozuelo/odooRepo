@@ -1,12 +1,14 @@
 <odoo>
   <data>
-    <!--VISTA DE HORARIOS-->
+    <!--VISTA DE HORARIOS TREE-->
    <record model="ir.ui.view" id="horarios.horario_list_view">
     <field name="name">horarios.horario.view.tree</field>
     <field name="model">horarios.horario</field>
     <field name="arch" type="xml">
       <tree>
         <field name="nombreHorario"/>
+        <field name="lunesEntrada"/>
+        <field name="lunesSalida"/>
       </tree>
     </field>
   </record>
@@ -22,6 +24,8 @@
   <menuitem name="horarios" id="horarios.menu_root"/>
 
   <menuitem name="Horario" id="horarios.horario_menu" parent="horarios.menu_root" action="horarios.horario_action_window"/>
+
+
 
   </data>
 </odoo>

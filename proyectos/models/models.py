@@ -31,6 +31,7 @@ class departamento(models.Model):
     #Comentario de prueba
     empleado_id = fields.One2many('proyectos.empleado','departamento_id' ,string='Departamento')
 
+
     def name_get(self):
         listaDptos =  []
         for departamento in self:
@@ -78,6 +79,9 @@ class empleado(models.Model):
     #relaciones entre tablas
     departamento_id = fields.Many2one('proyectos.departamento', string='Empleados')
     proyecto_ids = fields.Many2many('proyectos.proyecto', string='Proyectos')
+
+    #Relacion entre tablas modulo horario
+    horario_id = fields.Many2one('horarios.horario', string='Horarios')
 
 class proyecto(models.Model):
     _name = 'proyectos.proyecto'
