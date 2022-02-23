@@ -71,7 +71,7 @@
  <!--DEFINICION DE MENUS-->
     <!-- Top menu item -->
   <record model="ir.actions.act_window" id="horarios.horario_action_window">
-    <field name="name">Hoario</field>
+    <field name="name">Horario</field>
     <field name="res_model">horarios.horario</field>
     <field name="view_mode">tree,form</field>
   </record>
