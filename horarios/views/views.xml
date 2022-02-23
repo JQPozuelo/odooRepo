@@ -30,7 +30,9 @@
           </group>
           <notebook>
             <page string="Pagina 1">
-              <field name="nombreHorario"/>
+              <group>
+                <field name="nombreHorario"/>
+              </group>
               <group col="2">
                 <field name="lunesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
                 <field name="lunesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
