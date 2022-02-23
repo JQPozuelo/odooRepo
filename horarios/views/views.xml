@@ -32,7 +32,7 @@
             <page string="Pagina 1">
               <group col="2">
                 <field name="lunesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
-                <field name="lunesSalida"/>
+                <field name="lunesSalida" widget="timepicker" options="{'datepicker': {'stepping': 15}}" style="width:10%%"/>
               </group>
             </page>
             <page string="Pagina 2">
