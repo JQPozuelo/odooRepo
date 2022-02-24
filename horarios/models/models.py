@@ -70,6 +70,6 @@ class horario(models.Model):
         he = datetime.strptime(self.lunesEntrada, '%H:%M').time()
         hs = datetime.strptime(self.lunesSalida, '%H:%M').time()
         if(he > hs):
-            raise exceptions.ValidationError("La hora de salida tiene que ser menos que la de entrada")
+            raise exceptions.ValidationError("La hora de salida tiene que ser mayor que la de entrada")
 
     
