@@ -37,24 +37,24 @@
                 <field name="empleado_id"/>
               </group>
               <group col="2">
-                <field name="lunesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
-                <field name="lunesSalida" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
+                <field name="lunesEntrada" style="width:10%%"/>
+                <field name="lunesSalida" style="width:10%%"/>
               </group>
               <group col="2">
-                <field name="martesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
-                <field name="martesSalida" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
+                <field name="martesEntrada" style="width:10%%"/>
+                <field name="martesSalida" style="width:10%%"/>
               </group>
               <group col="2">
-                <field name="miercolesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
-                <field name="miercolesSalida" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
+                <field name="miercolesEntrada" style="width:10%%"/>
+                <field name="miercolesSalida" style="width:10%%"/>
               </group>
               <group col="2">
-                <field name="juevesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
-                <field name="juevesSalida" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
+                <field name="juevesEntrada" style="width:10%%"/>
+                <field name="juevesSalida" style="width:10%%"/>
               </group>
               <group col="2">
-                <field name="viernesEntrada" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
-                <field name="viernesSalida" widget="timepicker" options="{'datepicker': {'stepping': 30}}" style="width:10%%"/>
+                <field name="viernesEntrada" style="width:10%%"/>
+                <field name="viernesSalida" style="width:10%%"/>
               </group>
             </page>
             <page string="Pagina 2">
