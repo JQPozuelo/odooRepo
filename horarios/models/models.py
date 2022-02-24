@@ -65,7 +65,7 @@ class horario(models.Model):
         ]
         return selection
 
-    @api.onchange('lunesEntrada','lunesSalida')
+    @api.constrains('lunesEntrada','lunesSalida')
     def change_data_field(self):
         he = datetime.strptime(self.lunesEntrada,'%H:%M').time()
         hs = datetime.strptime(self.lunesSalida,'%H:%M').time()
