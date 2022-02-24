@@ -20,6 +20,7 @@
 import string
 from odoo import models, fields, api, exceptions
 from datetime import date
+from datetime import datetime
 from dateutil.relativedelta import *
 
 class horario(models.Model):
@@ -63,4 +64,12 @@ class horario(models.Model):
             ('18', '18:00')
         ]
         return selection
+
+    @api.onchange('lunesEntrada', 'lunesSalida')
+    def change_data_field(self):
+        he = datetime.strptime(self.lunesEntrada, '%H:%M').time()
+        hs = datetime.strptime(self.lunesSalida, '%H:%M').time()
+        if(he > hs):
+            raise exceptions.ValidationError("La hora de salida tiene que ser menos que la de entrada")
+
     
