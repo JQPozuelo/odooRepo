@@ -65,7 +65,7 @@ class horario(models.Model):
         ]
         return selection
 
-    @api.constrains('lunesEntrada')
+    @api.constrains('lunesEntrada', 'martesEntrada', 'miercolesEntrada', 'juevesEntrada', 'viernesEntrada')
     def change_data_field(self):
         he = float(self.lunesEntrada)
         hs = float(self.lunesSalida)
