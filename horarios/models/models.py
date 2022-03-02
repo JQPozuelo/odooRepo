@@ -23,6 +23,19 @@ from datetime import date
 from datetime import datetime
 from dateutil.relativedelta import *
 
+class bajas(models.Model):
+    _name = 'horarios.bajas'
+    _description = 'Define los atributos de una baja'
+
+    motivoBaja = fields.Selection(string='Motivo de la baja', selection=[('a', 'Enfermedad'), ('b', 'Maternidad'), ('c', 'Paternidad') ,('d', 'Accidente')])
+
+    gravedadBaja = fields.Selection(string='Gravedad de la baja', selection=[('a', 'Alta'), ('b', 'Media'), ('c', 'Baja')])
+
+    descripcionBaja = fields.Text(string='Descripcion de la baja', requiered=True, help='Escribe una descripcion detallada')
+    fechaInicio = fields.Date(string='Fecha de la baja', required=True, default=fields.Date.today())
+
+    #Relacion entre tablas
+    empleado_id = fields.Many2one('proyectos.empleado', 'empleado.baja_id')
 class horario(models.Model):
     _name = 'horarios.horario'
     _description = 'Define los atributos de un horario'

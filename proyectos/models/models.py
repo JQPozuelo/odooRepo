@@ -82,6 +82,7 @@ class empleado(models.Model):
 
     #Relacion entre tablas modulo horario
     horario_id = fields.Many2one('horarios.horario', string='Horarios')
+    baja_id = fields.Many2one('horarios.baja', string='Baja')
 
 class proyecto(models.Model):
     _name = 'proyectos.proyecto'
