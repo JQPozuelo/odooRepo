@@ -1,7 +1,7 @@
 <odoo>
   <data>
     <!--VISTA DE HORARIOS TREE-->
-   <record model="ir.ui.view" id="horarios.horario_list_view">
+  <record model="ir.ui.view" id="horarios.horario_list_view">
     <field name="name">horarios.horario.view.tree</field>
     <field name="model">horarios.horario</field>
     <field name="arch" type="xml">
@@ -81,11 +81,6 @@
       </tree>
     </field>
   </record>
-
-
-
-
-
 
 
 

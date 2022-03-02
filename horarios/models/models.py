@@ -36,6 +36,7 @@ class bajas(models.Model):
 
     #Relacion entre tablas
     empleado_id = fields.Many2one('proyectos.empleado', 'empleado.baja_id')
+    
 class horario(models.Model):
     _name = 'horarios.horario'
     _description = 'Define los atributos de un horario'
