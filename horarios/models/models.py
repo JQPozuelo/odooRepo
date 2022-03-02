@@ -27,7 +27,7 @@ class bajas(models.Model):
     _name = 'horarios.bajas'
     _description = 'Define los atributos de una baja'
 
-    motivoBaja = fields.Selection(string='Motivo de la baja', selection=[('a', 'Enfermedad'), ('b', 'Maternidad'), ('c', 'Paternidad') ,('d', 'Accidente')])
+    motivoBaja = fields.Selection(string='Motivo de la baja', selection=[('a', 'Enfermedad'), ('b', 'Maternidad'), ('c', 'Paternidad'), ('d','Accidente')])
 
     gravedadBaja = fields.Selection(string='Gravedad de la baja', selection=[('a', 'Alta'), ('b', 'Media'), ('c', 'Baja')])
 
