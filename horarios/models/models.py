@@ -72,4 +72,26 @@ class horario(models.Model):
         if(he > hs):
             raise exceptions.ValidationError("La hora de salida del Lunes tiene que ser mayor que la de entrada")
 
+        he = float(self.martesEntrada)
+        hs = float(self.martesSalida)
+        if(he > hs):
+            raise exceptions.ValidationError("La hora de salida del Martes tiene que ser mayor que la de entrada")
+
+        he = float(self.miercolesEntrada)
+        hs = float(self.miercolesSalida)
+        if(he > hs):
+            raise exceptions.ValidationError("La hora de salida del Miercoles tiene que ser mayor que la de entrada")
+
+        he = float(self.juevesEntrada)
+        hs = float(self.juevesSalida)
+        if(he > hs):
+            raise exceptions.ValidationError("La hora de salida del Jueves tiene que ser mayor que la de entrada")
+
+        he = float(self.viernesEntrada)
+        hs = float(self.viernesSalida)
+        if(he > hs):
+            raise exceptions.ValidationError("La hora de salida del Viernes tiene que ser mayor que la de entrada")
+
+    
+
     
