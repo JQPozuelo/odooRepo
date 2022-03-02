@@ -48,6 +48,12 @@ class horario(models.Model):
     viernesEntrada = fields.Selection(string='Hora entrada viernes', selection='_get_valid_hours', default='8.5')
     viernesSalida = fields.Selection(string='Hora salida viernes', selection='_get_valid_hours', default='8.5')
 
+    def name_get(self):
+        resultados = []
+        for horario in self:
+            resultados.append(horario.id, horario.nombreHorario)
+        return resultados
+
     @api.model
     def _get_valid_hours(self):
         selection = [
