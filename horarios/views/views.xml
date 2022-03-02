@@ -68,19 +68,18 @@
     </field>
   </record>
 
-
- <!--VISTA DE BAJAS TREE-->
   <record model="ir.ui.view" id="horarios.bajas_list_view">
     <field name="name">horarios.bajas.view.tree</field>
     <field name="model">horarios.bajas</field>
     <field name="arch" type="xml">
       <tree>
-        <field name="fechaBaja"/>
-        <field name="motivoBaja"/>
+        <field name="dsdsd"/>
+        <field name="dsds"/>
         <field name="empleado_id"/>
       </tree>
     </field>
   </record>
+ 
 
 
 
