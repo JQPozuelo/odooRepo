@@ -84,6 +84,12 @@ class empleado(models.Model):
     horario_id = fields.Many2one('horarios.horario', string='Horarios')
     baja_id = fields.Many2one('horarios.bajas', string='Baja')
 
+    def name_get(self):
+        listaEmp =  []
+        for empleado in self:
+            listaEmp.append((empleado.id, empleado.nombreEmpleado))
+        return listaEmp
+
 class proyecto(models.Model):
     _name = 'proyectos.proyecto'
     _description = 'Atributos de un proyecto'
