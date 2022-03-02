@@ -51,7 +51,7 @@ class horario(models.Model):
     def name_get(self):
         resultados = []
         for horario in self:
-            resultados.append(horario.id, horario.nombreHorario)
+            resultados.append((horario.id, horario.nombreHorario))
         return resultados
 
     @api.model
