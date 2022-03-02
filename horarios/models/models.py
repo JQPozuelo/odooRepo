@@ -35,7 +35,7 @@ class bajas(models.Model):
     fechaInicio = fields.Date(string='Fecha de la baja', required=True, default=fields.Date.today())
 
     #Relacion entre tablas
-    empleado_id = fields.Many2one('proyectos.empleado', 'empleado.baja_id')
+    empleado_id = fields.Many2one('proyectos.empleado', string='Empleado')
     
 class horario(models.Model):
     _name = 'horarios.horario'
