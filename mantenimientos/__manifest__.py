@@ -32,4 +32,6 @@
     'demo': [
         'demo/demo.xml',
     ],
+    #es una aplicacion
+    'application' : True ,
 }
