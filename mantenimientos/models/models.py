@@ -21,3 +21,11 @@ import string
 from odoo import models, fields, api, exceptions
 from datetime import date
 from dateutil.relativedelta import *
+
+class mantenimiento(models.Model):
+    _name = 'mantenimientos.mantenimiento'
+    _description = 'Atributos del mantenimiento'
+
+    TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', required=True)
+    Precio = fields.Integer(string = 'Precio del mantenimiento', required=True)
+    Fecha = fields.date(string = 'Fecha de recepcion', required=True)
