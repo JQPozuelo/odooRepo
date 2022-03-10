@@ -58,8 +58,8 @@
 -->
 
     <record model="ir.ui.view" id="mantenimientos.descripcion_list_view">
-      <field name="name"> mantenimientos.descripcion.view.tree </field>
-      <field name="model"> mantenimientos.descripcion</field>
+      <field name="name">mantenimientos.descripcion.view.tree</field>
+      <field name="model">mantenimientos.descripcion</field>
       <field name="arch" type="xml">
         <tree>
           <field name="TipoMantenimiento"/>
