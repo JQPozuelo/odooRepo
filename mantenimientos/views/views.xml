@@ -76,15 +76,11 @@
     <record model="ir.actions.act_window" id="mantenimientos.descripcion_action_window">
       <field name="name">Descripcion</field>
       <field name="res_model">mantenimientos.descripcion</field>
-      <field name="view_mode">tree, form</field>
+      <field name="view_mode">tree,form</field>
     </record>
-
-
 
     <menuitem name="Mantenimientos" id="mantenimientos.menu_root"/>
 
-
-      
     <menuitem name="Descripcion" id="mantenimientos.descripcion_menu" parent="mantenimientos.menu_root" action="mantenimientos.descripcion_action_window"/>
       
   </data>
