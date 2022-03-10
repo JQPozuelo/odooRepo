@@ -28,4 +28,5 @@ class descripcion(models.Model):
 
     TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', requiered=True)
     Precio = fields.Integer(string = 'Precio del mantenimiento', requiered=True)
+    Apuntes = fields.Text(string='Notas de la reparacion', requiered=True)
     Fecha = fields.Date(string = 'Fecha de recepcion', requiered=True, default= fields.date.today())

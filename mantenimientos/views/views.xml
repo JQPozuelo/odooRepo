@@ -64,6 +64,7 @@
         <tree>
           <field name="TipoMantenimiento"/>
           <field name="Precio"/>
+          <field name="Notas"/>
           <field name="Fecha"/>
         </tree>
       </field>
