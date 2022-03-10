@@ -57,20 +57,35 @@
               action="mantenimientos.action_server"/>
 -->
 
+  <record model="ir.ui.view" id="mantenimientos.mantenimiento_list_view">
+    <field name="name"> mantenimientos.mantenimiento.view.tree </field>
+    <field name="model"> mantenimientos.mantenimiento</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="TipoMantenimiento"/>
+        <field name="Precio"/>
+        <field name="Fecha"/>
+      </tree>
+    </field>
+  </record>
 
 
 
+  <!--DEFINICION DE MENUS-->
+  <!-- Top menu item -->
+  <record model="ir.actions.act_window" id="mantenimientos.mantenimiento_action_window">
+    <field name="name">Mantenimiento</field>
+    <field name="res_model">mantenimientos.mantenimiento</field>
+    <field name="view_mode">tree, form</field>
+  </record>
 
 
 
+  <menuitem name="Mantenimientos" id="mantenimientos.menu_root"/>
 
 
-
-
-
-    <menuitem name="Mantenimientos" id="mantenimientos.menu_root"/>
     
-    <menuitem name="Mantenimiento" id="mantenimientos.mantenimiento_menu" parent="mantenimientos.menu_root" action="mantenimientos.mantenimiento_action_window"/>
+  <menuitem name="Mantenimiento" id="mantenimientos.mantenimiento_menu" parent="mantenimientos.menu_root" action="mantenimientos.mantenimiento_action_window"/>
     
   </data>
 </odoo>
