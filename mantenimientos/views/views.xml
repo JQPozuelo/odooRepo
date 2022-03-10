@@ -69,8 +69,8 @@
 
 
     <menuitem name="Mantenimientos" id="mantenimientos.menu_root"/>
+    
     <menuitem name="Mantenimiento" id="mantenimientos.mantenimiento_menu" parent="mantenimientos.menu_root" action="mantenimientos.mantenimiento_action_window"/>
     
-    <menuitem name="Coches" id="mantenimientos.coches_menu" parent="mantenimientos.menu_root" action="mantenimientos.coches_action_window"/>
   </data>
 </odoo>
