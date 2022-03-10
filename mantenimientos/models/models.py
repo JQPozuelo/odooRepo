@@ -22,8 +22,8 @@ from odoo import models, fields, api, exceptions
 from datetime import date
 from dateutil.relativedelta import *
 
-class mantenimiento(models.Model):
-    _name = 'mantenimientos.mantenimiento'
+class descripcion(models.Model):
+    _name = 'mantenimientos.descripcion'
     _description = 'Atributos del mantenimiento'
 
     TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', requiered=True)
