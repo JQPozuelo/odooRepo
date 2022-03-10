@@ -26,6 +26,6 @@ class mantenimiento(models.Model):
     _name = 'mantenimientos.mantenimiento'
     _description = 'Atributos del mantenimiento'
 
-    TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', required=True)
-    Precio = fields.Integer(string = 'Precio del mantenimiento', required=True)
-    Fecha = fields.date(string = 'Fecha de recepcion', required=True, default= fields.date.today())
+    TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', requiered=True)
+    Precio = fields.Integer(string = 'Precio del mantenimiento', requiered=True)
+    Fecha = fields.date(string = 'Fecha de recepcion', requiered=True, default= fields.date.today())
