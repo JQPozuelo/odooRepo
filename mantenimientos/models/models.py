@@ -23,7 +23,7 @@ from datetime import date
 from dateutil.relativedelta import *
 
 class descripcion(models.Model):
-    _name = 'mantenimientos.descripcion'
+    _name = 'mantenimientos.descri'
     _description = 'Atributos del mantenimiento'
 
     TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', requiered=True)
