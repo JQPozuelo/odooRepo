@@ -31,6 +31,8 @@ class descripcion(models.Model):
     Apuntes = fields.Text(string='Notas de la reparacion', requiered=True, help='Apunta bien lo que haga falta')
     Fecha = fields.Date(string='Fecha de recepcion', requiered=True, default= fields.date.today())
 
+    #Relacion
+    CocheSeleccionado = fields.Many2one('mantenimientos.coches', string='Coche')
 
 class coche(models.Model):
     _name = 'mantenimientos.coches'
@@ -42,3 +44,5 @@ class coche(models.Model):
     Combustible = fields.Selection(string='Combustible del vehiculo', selection=[('a', 'Gasolina'), ('b', 'Diesel')])
     NombrePropietario = fields.Char(string='Nombre del propietario', requiered=True)
     TelefonoPropietario = fields.Char(string='Telefono del propietario', requiered=True)
+
+
