@@ -26,7 +26,19 @@ class descripcion(models.Model):
     _name = 'mantenimientos.descripcion'
     _description = 'Atributos del mantenimiento'
 
-    TipoMantenimiento = fields.Char(string = 'Tipo de mantenimiento', requiered=True)
-    Precio = fields.Integer(string = 'Precio del mantenimiento', requiered=True)
-    Apuntes = fields.Text(string='Notas de la reparacion', requiered=True)
-    Fecha = fields.Date(string = 'Fecha de recepcion', requiered=True, default= fields.date.today())
+    TipoMantenimiento = fields.Char(string='Tipo de mantenimiento', requiered=True)
+    Precio = fields.Integer(string='Precio del mantenimiento', requiered=True)
+    Apuntes = fields.Text(string='Notas de la reparacion', requiered=True, help='Apunta bien lo que haga falta')
+    Fecha = fields.Date(string='Fecha de recepcion', requiered=True, default= fields.date.today())
+
+
+class coche(models.Model):
+    _name = 'mantenimientos.coches'
+    _description = 'Atributos del coche'
+
+    Modelo = fields.Char(string='Modelo del vehiculo', requiered=True)
+    Anio = fields.Integer(string='Año de fabricacion', requiered=True)
+    Motor = fields.Char(string='Tipo de motor', requiered=True)
+    Combustible = fields.Selection(string='Combustible del vehiculo', selection=[('a', 'Gasolina'), ('b', 'Diesel')])
+    NombrePropietario = fields.Char(string='Nombre del propietario', requiered=True)
+    TelefonoPropietario = fields.Char(string='Telefono del propietario', requiered=True)

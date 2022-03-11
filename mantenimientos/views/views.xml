@@ -56,7 +56,7 @@
     <menuitem name="Server to list" id="mantenimientos" parent="mantenimientos.menu_2"
               action="mantenimientos.action_server"/>
 -->
-
+    <!-- Vista descripcion -->
     <record model="ir.ui.view" id="mantenimientos.descripcion_list_view">
       <field name="name">mantenimientos.descripcion.view.tree</field>
       <field name="model">mantenimientos.descripcion</field>
@@ -70,7 +70,57 @@
       </field>
     </record>
 
+    <!-- Top menu item -->
+    <record model="ir.actions.act_window" id="mantenimientos.coches_action_window">
+      <field name="name">Coches</field>
+      <field name="res_model">mantenimientos.coches</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
+
+    <!-- Vista coches -->
+    <record model="ir.ui.view" id="mantenimientos.coches_view">
+      <field name="name">mantenimientos.coches.view.tree</field>
+      <field name="model">mantenimientos.coches</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <div class="oe_button_box">
+            <BUTTONS/>
+            </div>
+            <group>
+              <group>
+                <h1>Vista Coche</h1>
+              </group>
+            </group>
+            <notebook>
+              <page string="Pagina 1">
+                <group>
+                  <field name="Modelo"/>
+                </group>
+                <group>
+                  <field name="Anio"/>
+                </group>
+                <group>
+                  <field name="Motor"/>
+                </group>
+                <group>
+                  <field name="Combustible"/>
+                </group>
+                <group>
+                  <field name="NombrePropietario"/>
+                </group>
+                <group>
+                  <field name="TelefonoPropietario"/>
+                </group>
+              </page>
+              <page string="Pagina 2">
+                <CONTENT/>
+              </<page>
+            </notebook>
+          </sheet>
+        </form>
+    </record>
 
     <!--DEFINICION DE MENUS-->
     <!-- Top menu item -->
@@ -83,6 +133,6 @@
     <menuitem name="Mantenimientos" id="mantenimientos.menu_root"/>
 
     <menuitem name="Descripcion" id="mantenimientos.descripcion_menu" parent="mantenimientos.menu_root" action="mantenimientos.descripcion_action_window"/>
-      
+    <menuitem name="Coches" id="mantenimientos.coches_menu" parent="mantenimientos.menu_root" action="mantenimientos.coches_action_window"/>
   </data>
 </odoo>
