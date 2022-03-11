@@ -116,7 +116,7 @@
               </page>
               <page string="Pagina 2">
                 <CONTENT/>
-              </<page>
+              </page>
             </notebook>
           </sheet>
         </form>
