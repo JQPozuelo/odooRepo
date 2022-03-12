@@ -34,6 +34,13 @@ class descripcion(models.Model):
     #Relacion
     CocheSeleccionado = fields.Many2one('mantenimientos.coches', string='Coche')
 
+    def name_get(self):
+        listaDescrip =  []
+        for descripcion in self:
+            listaDescrip.append((descripcion.id, descripcion.TipoMantenimiento))
+        return listaDescrip
+
+
 class coche(models.Model):
     _name = 'mantenimientos.coches'
     _description = 'Atributos del coche'
@@ -44,5 +51,9 @@ class coche(models.Model):
     Combustible = fields.Selection(string='Combustible del vehiculo', selection=[('a', 'Gasolina'), ('b', 'Diesel')])
     NombrePropietario = fields.Char(string='Nombre del propietario', requiered=True)
     TelefonoPropietario = fields.Char(string='Telefono del propietario', requiered=True)
-
-
+    
+    @api.constrains('TelefonoPropietario')
+    def _checkTelefono(self):
+        for coches in self:
+            if(len(coches.TelefonoPropietario) < 9):
+                raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
