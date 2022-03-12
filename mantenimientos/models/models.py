@@ -55,7 +55,6 @@ class coche(models.Model):
     TelefonoPropietario = fields.Char(string='Telefono del propietario', requiered=True)
     
     #Validaciones y metodos
-
     def name_get(self):
         listaCoches =  []
         for coches in self:
