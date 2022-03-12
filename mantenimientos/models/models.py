@@ -41,7 +41,7 @@ class descripcion(models.Model):
 
 
     #Relacion
-    CocheSeleccionado = fields.Many2one('mantenimientos.coches', string='Coche')
+    CocheSeleccionado = fields.Many2many('mantenimientos.coches', string='Coche')
 
     #Validaciones y metodos
     def name_get(self):
@@ -77,4 +77,4 @@ class coche(models.Model):
                 raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
 
     #Relaciones
-    MantenimientoS = fields.One2many('mantenimientos.descripcion', 'CocheSeleccionado', string='Descripcion')
+    #MantenimientoS = fields.One2many('mantenimientos.descripcion', 'CocheSeleccionado', string='Descripcion')
