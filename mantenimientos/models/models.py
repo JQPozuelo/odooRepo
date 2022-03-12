@@ -37,7 +37,7 @@ class descripcion(models.Model):
     def _getPr(self):
         hoy = date.today()
         for descripcion in self:
-            descripcion.prueba = relativedelta(hoy, descripcion.fecha).years
+            descripcion.prueba = relativedelta(hoy, descripcion.Fecha).years
 
 
     #Relacion
