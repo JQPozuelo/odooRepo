@@ -16,3 +16,26 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
+
+import string
+from odoo import models, fields, api, exceptions
+from datetime import date
+from dateutil.relativedelta import *
+
+class empresas(models.Model):
+    _name = 'proveedores.empresas'
+    _description = 'Atributos de las empresas'
+    #Atributos de la clase
+    NIFEmpresa = fields.Char(string='NIF de la empresa', required=True)
+    NombreEmpresa = fields.Char(string='Nombre de la empresa', required=True)
+    Localizacion = fields.Char(string='Localidad de la empresa', required=True)
+    Facturacion = fields.Integer(string='Facturacion mensual', required=True)
+
+class materiales(models.Model):
+    _name = 'proveedores.materiales'
+    _description = 'Atributos de los materiales'
+    #Atributos de la clase
+    NombrePieza = fields.Char(string='Nombre de la pieza', required=True)
+    CostePieza = fields.Integer(string='Coste de la pieza', required=True)
+
+    
