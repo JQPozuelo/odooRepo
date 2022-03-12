@@ -25,7 +25,7 @@ from dateutil.relativedelta import *
 class descripcion(models.Model):
     _name = 'mantenimientos.descripcion'
     _description = 'Atributos del mantenimiento'
-
+    #Atributos de la clase
     TipoMantenimiento = fields.Char(string='Tipo de mantenimiento', requiered=True)
     Precio = fields.Integer(string='Precio del mantenimiento', requiered=True)
     Apuntes = fields.Text(string='Notas de la reparacion', requiered=True, help='Apunta bien lo que haga falta')
@@ -34,6 +34,7 @@ class descripcion(models.Model):
     #Relacion
     CocheSeleccionado = fields.Many2one('mantenimientos.coches', string='Coche')
 
+    #Validaciones y metodos
     def name_get(self):
         listaDescrip =  []
         for descripcion in self:
@@ -45,6 +46,7 @@ class coche(models.Model):
     _name = 'mantenimientos.coches'
     _description = 'Atributos del coche'
 
+    #Atributos de la clase
     Modelo = fields.Char(string='Modelo del vehiculo', requiered=True)
     Anio = fields.Integer(string='Año de fabricacion', requiered=True)
     Motor = fields.Char(string='Tipo de motor', requiered=True)
@@ -52,6 +54,14 @@ class coche(models.Model):
     NombrePropietario = fields.Char(string='Nombre del propietario', requiered=True)
     TelefonoPropietario = fields.Char(string='Telefono del propietario', requiered=True)
     
+    #Validaciones y metodos
+
+    def name_get(self):
+        listaCoches =  []
+        for coches in self:
+            listaCoches.append((coches.id, coches.Modelo))
+        return listaCoches
+
     @api.constrains('TelefonoPropietario')
     def _checkTelefono(self):
         for coches in self:
