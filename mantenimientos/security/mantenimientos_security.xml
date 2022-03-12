@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding='UTF-8'?>
+
+<odoo>
+
+    <data>
+        <record model="ir.module.category" id="mantenimientos.module_category_mantenimientos">
+            <field name="name">Mantenimientos</field>
+            <field name="description">Gestion y asignacion de mantenimientos</field>
+        </record>
+
+        <record model="res.groups" id="group_mantenimientos_UsuarioN">
+            <field name="name">UsuarioN</field>
+            <field name="category_id" ref="mantenimientos.module_category_mantenimientos"/>
+            <field name="comment">UsuarioN</field>
+        </record>
+
+        <record model="res.groups" id="group_mantenimientos_AdminP">
+            <field name="name">AdminP</field>
+            <field name="category_id" ref="mantenimientos.module_category_mantenimientos"/>
+            <field name="comment">AdminP</field>
+            <field name="implied_ids" eval="[(4, ref('group_mantenimientos_UsuarioN'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>
