@@ -1,6 +1,6 @@
 <odoo>
 
-    <record id="proyectos.Descrip_report" model="ir.actions.report">
+    <record id="mantenimientos.Descrip_report" model="ir.actions.report">
         <field name="name">Informe descripcion</field>
         <field name="model">mantenimientos.descripcion</field>
         <field name="report_type">qweb-pdf</field>
