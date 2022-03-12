@@ -56,5 +56,12 @@
     <menuitem name="Server to list" id="proveedores" parent="proveedores.menu_2"
               action="proveedores.action_server"/>
 -->
+
+  <!--Top menu item -->
+  
+
+  <menuitem name="Proveedores" id="proveedores.menu_root"/>
+
+  <menuitem name="Empresas" id="proveedores.empresas_menu" parent="proveedores.menu_root" action="proveedores.empresas_action_window"/>
   </data>
 </odoo>

@@ -66,3 +66,6 @@ class coche(models.Model):
         for coches in self:
             if(len(coches.TelefonoPropietario) < 9):
                 raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
+
+    #Relaciones
+    MantenimientoS = fields.One2many('mantenimientos.descripcion', 'CocheSeleccionado', string='Descripcion')
