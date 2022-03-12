@@ -131,7 +131,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Mantenimientos" id="mantenimientos.menu_root" web_icon = "mantenimientos,static/description/mante.png"/>
+    <menuitem name="Mantenimientos" id="mantenimientos.menu_root" web_icon = "mantenimientos,static/description/rue.png"/>
 
     <menuitem name="Descripcion" id="mantenimientos.descripcion_menu" parent="mantenimientos.menu_root" action="mantenimientos.descripcion_action_window"/>
     <menuitem name="Coches" id="mantenimientos.coches_menu" parent="mantenimientos.menu_root" action="mantenimientos.coches_action_window"/>
