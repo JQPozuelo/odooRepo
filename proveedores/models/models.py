@@ -33,7 +33,7 @@ class empresas(models.Model):
     Facturacion = fields.Integer(string='Facturacion mensual', required=True)
 
     #Relaciones
-    materiales_id = fields.Many2many(proveedores.materiales, string='Materiales a pedir')
+    materiales_id = fields.Many2many('proveedores.materiales', string='Materiales a pedir')
 
 class materiales(models.Model):
     _name = 'proveedores.materiales'
