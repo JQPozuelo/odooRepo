@@ -43,5 +43,6 @@ class materiales(models.Model):
     NombrePieza = fields.Char(string='Nombre de la pieza', required=True)
     CostePieza = fields.Integer(string='Coste de la pieza', required=True)
 
-
+    #Relacion
+    empresaSeleccionada = fields.Many2one('proveedores.empresas', string='Empresa')
     
