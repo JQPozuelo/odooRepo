@@ -95,7 +95,9 @@
 							</group>
 						</page>
 						<page string="Pagina 2">
-							<CONTENT/>
+							<group>
+								<field name="materiales_id"/>
+							</group>
 						</page>
 					</notebook>
 				</sheet>
