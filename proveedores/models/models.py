@@ -25,17 +25,23 @@ from dateutil.relativedelta import *
 class empresas(models.Model):
     _name = 'proveedores.empresas'
     _description = 'Atributos de las empresas'
+
     #Atributos de la clase
     NIFEmpresa = fields.Char(string='NIF de la empresa', required=True)
     NombreEmpresa = fields.Char(string='Nombre de la empresa', required=True)
     Localizacion = fields.Char(string='Localidad de la empresa', required=True)
     Facturacion = fields.Integer(string='Facturacion mensual', required=True)
 
+    #Relaciones
+    materiales_id = fields.Many2many(proveedores.materiales, string='Materiales a pedir')
+
 class materiales(models.Model):
     _name = 'proveedores.materiales'
     _description = 'Atributos de los materiales'
+
     #Atributos de la clase
     NombrePieza = fields.Char(string='Nombre de la pieza', required=True)
     CostePieza = fields.Integer(string='Coste de la pieza', required=True)
+
 
     
