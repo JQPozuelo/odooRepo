@@ -70,12 +70,12 @@
 		<field name="res_model">proveedores.empresas</field>
 		<field name="view_mode">tree,form</field>
 		<field name="arch" type="xml">
-        <tree>
-          <field name="NIFEmpresa"/>
-          <field name="NombreEmpresa"/>
-          <field name="Localizacion"/>
-        </tree>
-      </field>
+        	<tree>
+				<field name="NIFEmpresa"/>
+				<field name="NombreEmpresa"/>
+				<field name="Localizacion"/>
+        	</tree>
+      	</field>
 	</record>
 	<!-- Vista coches -->
 	<record model="ir.ui.view" id="proveedores.empresas_view">
@@ -136,8 +136,9 @@
           <field name="IdPieza"/>
           <field name="NombrePieza"/>
         </tree>
+	</field>
   </record>
-  
+
 	<menuitem name="Proveedores" id="proveedores.menu_root"/>
 
 	<menuitem name="Empresas" id="proveedores.empresas_menu" parent="proveedores.menu_root" action="proveedores.empresas_action_window"/>
