@@ -13,13 +13,11 @@
 	<template id="empresas_report_view">
 
 		<t t-call="web.html_container">
-			<t t-foreach="docs" t-as="descripcion">
+			<t t-foreach="docs" t-as="empresas">
 				<t t-call="web.external_layout">
 					<div class="page">
 						<h2>Informe</h2>
 						<h3 t-field="empresas.NombreEmpresa"></h3>
-					   
-
 						<table class="table table-sm o_main_table">
 							<thead>
 								<tr>
