@@ -126,7 +126,17 @@
 	<field name="res_model">proveedores.materiales</field>
 	<field name="view_mode">tree,form</field>
   </record>
-
+<!--Vista arbol -->
+	<record model="ir.ui.view" id="proveedores.materiales_list_view">
+      <field name="name">proveedores.materiales.view.tree</field>
+      <field name="model">proveedores.materiales</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="IdPieza"/>
+          <field name="NombrePieza"/>
+        </tree>
+      </field>
+    </record>
 	<menuitem name="Proveedores" id="proveedores.menu_root"/>
 
 	<menuitem name="Empresas" id="proveedores.empresas_menu" parent="proveedores.menu_root" action="proveedores.empresas_action_window"/>
