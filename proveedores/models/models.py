@@ -35,6 +35,19 @@ class empresas(models.Model):
     #Relaciones
     materiales_id = fields.Many2many('proveedores.materiales', string='Materiales a pedir')
 
+    #Validaciones y metodos
+    def name_get(self):
+        listaEmpresas =  []
+        for empresas in self:
+            listaEmpresas.append((empresas.id, empresas.NombreEmpresa))
+        return listaEmpresas
+    
+    @api.constrains('NIFEmpresa')
+    def _checkNIF(self):
+        for empresas in self:
+            if(len(empresas.NIFEmpresa) > 5):
+                raise exceptions.ValidationError("El NIF no puede tener mas de 5 numeros")
+
 class materiales(models.Model):
     _name = 'proveedores.materiales'
     _description = 'Atributos de los materiales'
@@ -47,3 +60,9 @@ class materiales(models.Model):
     #Relacion
     empresaSeleccionada = fields.Many2one('proveedores.empresas', string='Empresa')
     
+    #Validaciones y metodos
+    def name_get(self):
+        listaMateriales =  []
+        for materiales in self:
+            listaMateriales.append((materiales.id, materiales.NombrePieza))
+        return listaMateriales
