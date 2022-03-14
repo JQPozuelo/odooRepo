@@ -33,7 +33,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-foreach="descripcion.cocheSeleccionado" t-as="coches">
+                                <t t-foreach="descripcion.CocheSeleccionado" t-as="coches">
                                     <tr>
                                         <td>
                                             <span t-field="coches.Modelo"/>
