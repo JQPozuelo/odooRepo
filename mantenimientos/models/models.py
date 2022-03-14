@@ -63,8 +63,8 @@ class coche(models.Model):
     @api.depends('FechaFa')
     def _getPr(self):
         hoy = date.today()
-        for descripcion in self:
-            descripcion.Prueba = relativedelta(hoy, descripcion.Fecha).years
+        for coches in self:
+            coches.FechaFa = relativedelta(hoy, coches.Anio).years
 
     def name_get(self):
         listaCoches =  []
