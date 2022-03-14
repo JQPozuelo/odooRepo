@@ -63,6 +63,7 @@
 		<field name="name">Empresas</field>
 		<field name="res_model">proveedores.empresas</field>
 		<field name="view_mode">tree,form</field>
+
 	</record>
 	<!--Vista arbol -->
 	
@@ -114,12 +115,6 @@
 	<field name="name">Materiales</field>
 	<field name="res_model">proveedores.materiales</field>
 	<field name="view_mode">tree,form</field>
-	<field name="arch" type="xml">
-		<tree>
-		  <field name="IdPieza"/>
-		  <field name="NombrePieza"/>
-		</tree>
-	</field>
   </record>
 
 	<menuitem name="Proveedores" id="proveedores.menu_root"/>
