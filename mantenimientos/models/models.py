@@ -30,14 +30,14 @@ class descripcion(models.Model):
     Precio = fields.Integer(string='Precio del mantenimiento', required=True)
     Apuntes = fields.Text(string='Notas de la reparacion', required=True, help='Apunta bien lo que haga falta')
     Fecha = fields.Date(string='Fecha de recepcion', required=True, default= fields.date.today())
-    Prueba = fields.Integer('Prueba', compute='_getPr')
+    Dias = fields.Integer('Dias que lleva el coche en el reparacion', compute='_getPr')
 
     #Prueba validacion
     @api.depends('Fecha')
     def _getPr(self):
         hoy = date.today()
         for descripcion in self:
-            descripcion.Prueba = relativedelta(hoy, descripcion.Fecha).days
+            descripcion.Dias = relativedelta(hoy, descripcion.Fecha).days
 
 
     #Relacion
