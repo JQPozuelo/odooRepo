@@ -57,7 +57,7 @@ class coche(models.Model):
     Combustible = fields.Selection(string='Combustible del vehiculo', selection=[('a', 'Gasolina'), ('b', 'Diesel')])
     NombrePropietario = fields.Char(string='Nombre del propietario', required=True)
     TelefonoPropietario = fields.Char(string='Telefono del propietario', required=True)
-    FechaFa = fields.Date(string='Fecha de fabricacion', required=True, default= fields.date.today())
+    FechaFa = fields.Date(string='Fecha de fabricacion', default= fields.date.today())
     
     #Validaciones y metodos
     @api.depends('FechaFa')
