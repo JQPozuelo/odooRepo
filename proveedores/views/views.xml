@@ -65,18 +65,7 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 	<!--Vista arbol -->
-	<record model="ir.actions.act_window" id="proveedores.empresas_action_window">
-		<field name="name">Empresas</field>
-		<field name="res_model">proveedores.empresas</field>
-		<field name="view_mode">tree,form</field>
-		<field name="arch" type="xml">
-        	<tree>
-				<field name="NIFEmpresa"/>
-				<field name="NombreEmpresa"/>
-				<field name="Localizacion"/>
-        	</tree>
-      	</field>
-	</record>
+	
 	<!-- Vista coches -->
 	<record model="ir.ui.view" id="proveedores.empresas_view">
 		<field name="name">proveedores.empresas.view.tree</field>
@@ -131,12 +120,7 @@
     <field name="name">Materiales</field>
     <field name="res_model">proveedores.materiales</field>
     <field name="view_mode">tree,form</field>
-	<field name="arch" type="xml">
-        <tree>
-          <field name="IdPieza"/>
-          <field name="NombrePieza"/>
-        </tree>
-	</field>
+	
   </record>
 
 	<menuitem name="Proveedores" id="proveedores.menu_root"/>
