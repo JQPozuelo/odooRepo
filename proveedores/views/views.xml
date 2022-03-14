@@ -114,13 +114,12 @@
     <field name="name">Materiales</field>
     <field name="res_model">proveedores.materiales</field>
     <field name="view_mode">tree,form</field>
-  </record>
-  <!--Vista arbol -->
-  <record model="ir.actions.act_window" id="proveedores.materiales_action_window">
-    <field name="name">Materiales</field>
-    <field name="res_model">proveedores.materiales</field>
-    <field name="view_mode">tree,form</field>
-	
+	<field name="arch" type="xml">
+        <tree>
+          <field name="IdPieza"/>
+          <field name="NombrePieza"/>
+        </tree>
+    </field>
   </record>
 
 	<menuitem name="Proveedores" id="proveedores.menu_root"/>
