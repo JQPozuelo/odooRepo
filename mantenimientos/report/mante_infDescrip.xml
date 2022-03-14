@@ -17,41 +17,41 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>Informe</h2>
-                        <h3 t-field="descripcion.Tipo"></h3>
+                        <h3 t-field="descripcion.TipoMantenimiento"></h3>
                        
 
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
-                                    <th>DNI</th>
-                                    <th>Nombre</th>
-                                    <th>Fecha de nacimiento</th>
+                                    <th>Modelo</th>
                                     <th>Edad</th>
-                                    <th>Direccion</th>
+                                    <th>Motor</th>
+                                    <th>Combustible</th>
+                                    <th>Nombre del propietario</th>
                                     <th>Telefono</th>
                                         
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-foreach="departamento.empleado_id" t-as="empleado">
+                                <t t-foreach="descripcion.cocheSeleccionado" t-as="coches">
                                     <tr>
                                         <td>
-                                            <span t-field="empleado.dniEmpleado"/>
+                                            <span t-field="coches.Modelo"/>
                                         </td>
                                         <td>
-                                            <span t-field="empleado.nombreEmpleado"/>
+                                            <span t-field="coches.Anio"/>
                                         </td>
                                         <td>
-                                            <span t-field="empleado.fechaNacimiento"/>
+                                            <span t-field="coches.Motor"/>
                                         </td>
                                         <td>
-                                            <span t-field="empleado.edad"/>
+                                            <span t-field="coches.Combustible"/>
                                         </td>
                                         <td>
-                                            <span t-field="empleado.direccionEmpleado"/>
+                                            <span t-field="coches.NombrePropietario"/>
                                         </td>
                                         <td>
-                                            <span t-field="empleado.telefonoEmpleado"/>
+                                            <span t-field="coches.TelefonoPropietario"/>
                                         </td>
                                     </tr>
                                 </t>
