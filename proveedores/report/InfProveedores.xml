@@ -1,0 +1,58 @@
+<odoo>
+
+	<record id="proveedores.InfProveedores" model="ir.actions.report">
+		<field name="name">Informe piezas</field>
+		<field name="model">proveedores.empresas</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">proveedores.empresas_report_view</field>
+		<field name="report_file">proveedores.empresas_report</field>
+		<field name="binding_model_id" ref="model_proveedores_empresas"></field>
+		<field name="binding_type">report</field>
+	</record>
+
+	<template id="empresas_report_view">
+
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="descripcion">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<h2>Informe</h2>
+						<h3 t-field="empresas.NombreEmpresa"></h3>
+					   
+
+						<table class="table table-sm o_main_table">
+							<thead>
+								<tr>
+									<th>NombrePieza</th>
+									<th>CostePieza</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-foreach="empresas.materiales_id" t-as="materiales">
+									<tr>
+										<td>
+											<span t-field="materiales.NombrePieza"/>
+										</td>
+										<td>
+											<span t-field="materiales.CostePieza"/>
+										</td>
+										
+									</tr>
+								</t>
+							</tbody>
+
+						</table>	
+						
+					</div>
+				</t>
+			</t>
+		
+		</t>
+
+
+	</template>
+
+
+
+
+</odoo>
