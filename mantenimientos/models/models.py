@@ -38,11 +38,20 @@ class descripcion(models.Model):
         hoy = date.today()
         for descripcion in self:
             descripcion.Dias = relativedelta(hoy, descripcion.Fecha).days
-
+    
+    @api.constrains('Fecha')
+    def _checkFecha(self):
+        hoy = date.today()
+        for descripcion in self:
+            descripcion.Fecha
+            dias = relativedelta(hoy, descripcion.Fecha).days
+            if (dias < 0):
+                raise exceptions.ValidationError("La fecha no puede ser superior a hoy")
 
     #Relacion
     CocheSeleccionado = fields.Many2one('mantenimientos.coches', string='Coche')
     EmpresaS = fields.Many2one('proveedores.empresas', string='Distribuidor')
+
     #Validaciones y metodos
     def name_get(self):
         listaDescrip =  []
