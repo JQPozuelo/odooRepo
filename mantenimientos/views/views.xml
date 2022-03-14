@@ -117,9 +117,6 @@
                   <field name="Anio"/>
                 </group>
                 <group>
-                  <field name="FechaFa"/>
-                </group>
-                <group>
                   <field name="Motor"/>
                 </group>
                 <group>
