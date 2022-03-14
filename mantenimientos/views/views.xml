@@ -80,7 +80,7 @@
 
     <!-- Vista coches -->
 
-    <record model="ir.ui.view" id="mantenimientos.descripcion_list_view">
+    <record model="ir.ui.view" id="mantenimientos.coches_list_view">
       <field name="name">mantenimientos.coches.view.tree</field>
       <field name="model">mantenimientos.coches</field>
       <field name="arch" type="xml">
