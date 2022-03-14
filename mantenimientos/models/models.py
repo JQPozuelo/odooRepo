@@ -76,5 +76,6 @@ class coche(models.Model):
             if(len(coches.TelefonoPropietario) < 9):
                 raise exceptions.ValidationError("El telefono no puede tener menos de 9 numeros")
 
-    
+    #Relacion
+    descripcion_id = fields.Many2many('mantenimientos.descripcion', string='Mantenimientos a hacer en cada coche')
    

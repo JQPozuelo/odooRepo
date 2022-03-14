@@ -79,6 +79,21 @@
 
 
     <!-- Vista coches -->
+
+    <record model="ir.ui.view" id="mantenimientos.descripcion_list_view">
+      <field name="name">mantenimientos.coches.view.tree</field>
+      <field name="model">mantenimientos.coches</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="Modelo"/>
+          <field name="Motor"/>
+          <field name="Combustible"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista coches -->
+
     <record model="ir.ui.view" id="mantenimientos.coches_view">
       <field name="name">mantenimientos.coches.view.tree</field>
       <field name="model">mantenimientos.coches</field>
@@ -115,7 +130,9 @@
                 </group>
               </page>
               <page string="Pagina 2">
-                <CONTENT/>
+                <group>
+                  <field name="descripcion_id"/>
+                </group>
               </page>
             </notebook>
           </sheet>
