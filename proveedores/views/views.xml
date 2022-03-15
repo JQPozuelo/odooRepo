@@ -137,7 +137,7 @@
         </tree>
       </field>
     </record>
-	<menuitem name="Proveedores" id="proveedores.menu_root" web_icon="proveedores,static/description/icon2.png"/>
+	<menuitem name="Proveedores" id="proveedores.menu_root" web_icon="proveedores,static/description/icon.png"/>
 
 	<menuitem name="Empresas" id="proveedores.empresas_menu" parent="proveedores.menu_root" action="proveedores.empresas_action_window"/>
 	<menuitem name="Materiales" id="proveedores.materiales_menu" parent="proveedores.menu_root" action="proveedores.materiales_action_window"/>
