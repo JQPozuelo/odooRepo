@@ -42,7 +42,7 @@
                                             <span t-field="descripcion.Apuntes"/>
                                         </td>
                                         <td>
-                                            <span t-field="coches.Fecha"/>
+                                            <span t-field="descripcion.Fecha"/>
                                         </td>
                                     </tr>
                                 </t>
