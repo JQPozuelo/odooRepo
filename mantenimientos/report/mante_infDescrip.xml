@@ -1,57 +1,48 @@
 <odoo>
 
-    <record id="mantenimientos.Descrip_report" model="ir.actions.report">
-        <field name="name">Informe descripcion</field>
-        <field name="model">mantenimientos.descripcion</field>
+    <record id="mantenimientos.Coches_report" model="ir.actions.report">
+        <field name="name">Informe coches mantenimientos</field>
+        <field name="model">mantenimientos.coches</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">mantenimientos.descripcion_report_view</field>
-        <field name="report_file">mantenimientos.descripcion_report</field>
-        <field name="binding_model_id" ref="model_mantenimientos_descripcion"></field>
+        <field name="report_name">mantenimientos.coches_report_view</field>
+        <field name="report_file">mantenimientos.coches_report</field>
+        <field name="binding_model_id" ref="model_mantenimientos_coches"></field>
         <field name="binding_type">report</field>
     </record>
 
-    <template id="descripcion_report_view">
+    <template id="coches_report_view">
 
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="descripcion">
+            <t t-foreach="docs" t-as="coches">
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>Informe</h2>
-                        <h3 t-field="descripcion.TipoMantenimiento"></h3>
+                        <h3 t-field="coches.Modelo"></h3>
                        
 
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
-                                    <th>Modelo</th>
-                                    <th>Edad</th>
-                                    <th>Motor</th>
-                                    <th>Combustible</th>
-                                    <th>Nombre del propietario</th>
-                                    <th>Telefono</th>
-                                        
+                                    <th>Mantenimiento</th>
+                                    <th>Precio</th>
+                                    <th>Notas</th>
+                                    <th>Fecha de recepcion</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <t t-foreach="descripcion.CocheSeleccionado" t-as="coches">
+                                <t t-foreach="coches.descripcion_id" t-as="descripcion">
                                     <tr>
                                         <td>
-                                            <span t-field="coches.Modelo"/>
+                                            <span t-field="descripcion.TipoMantenimiento"/>
                                         </td>
                                         <td>
-                                            <span t-field="coches.Anio"/>
+                                            <span t-field="descripcion.Precio"/>
                                         </td>
                                         <td>
-                                            <span t-field="coches.Motor"/>
+                                            <span t-field="descripcion.Apuntes"/>
                                         </td>
                                         <td>
-                                            <span t-field="coches.Combustible"/>
-                                        </td>
-                                        <td>
-                                            <span t-field="coches.NombrePropietario"/>
-                                        </td>
-                                        <td>
-                                            <span t-field="coches.TelefonoPropietario"/>
+                                            <span t-field="coches.Fecha"/>
                                         </td>
                                     </tr>
                                 </t>
