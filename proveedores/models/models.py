@@ -54,7 +54,7 @@ class materiales(models.Model):
 
     #Atributos de la clase
     IdPieza = fields.Char(string='Referencia de la pieza', required=True)
-    NombrePieza = fields.Char(string='Nombre de la pieza', required=True)
+    NombrePieza = fields.Char(string='Material', required=True)
     CostePieza = fields.Integer(string='Coste de la pieza', required=True)
 
     #Relacion
