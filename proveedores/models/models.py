@@ -66,3 +66,9 @@ class materiales(models.Model):
         for materiales in self:
             listaMateriales.append((materiales.id, materiales.NombrePieza))
         return listaMateriales
+
+    @api.constrains('IdPieza')
+    def _checkNIF(self):
+        for materiales in self:
+            if(len(materiales.IdPieza) > 5):
+                raise exceptions.ValidationError("El id de referencia de la pieza no puede tener mas de 5 numeros")
